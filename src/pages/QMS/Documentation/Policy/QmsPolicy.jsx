@@ -48,7 +48,7 @@ const QmsPolicy = () => {
     try {
       const companyId = getUserCompanyId();
       console.log("Fetching manuals for Company ID:", companyId);
-      const response = await axios.get(`${BASE_URL}/company/policy-documents/${companyId}/`);
+      const response = await axios.get(`${BASE_URL}/qms/policy/${companyId}/`);
       setQmsPolicies(response.data);
       console.log("Policies loaded:", response.data);
     } catch (error) {
